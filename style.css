@@ -19,9 +19,10 @@
     justify-content: flex-end;
     transition: width 1s;
     color: white;
+    border-radius: 5px;
 }
 
-img {
+img{
     padding: 30px;
 }
 
@@ -33,7 +34,7 @@ html{
 
 #app{
     position: fixed;
-    top: 30vh;
+    top: 10vh;
     margin-left: 25%;
     width: 600px;
     height: 100%;
@@ -54,16 +55,18 @@ html{
 #player-health{
     grid-area: playerHP;
     align-content: center;
+    box-shadow: 3px 3px rgb(2, 88, 2);
 }
 
 #monster-health{
     grid-area: monsterHP;
+    box-shadow: 3px 3px rgb(161, 3, 3);
 }
 
 #player{
     grid-area: playerIcon;
     width: 300px;
-    height: 2500px;
+    height: 250px;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -102,6 +105,13 @@ html{
 #fight{
     grid-area: fightButton;
     height: 50px;
+    font-size: 1rem;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#fight:hover{
+    cursor: pointer;
 }
 
 #player-damage-taken{
@@ -115,5 +125,6 @@ html{
 #results{
     grid-area: results;
     color: ivory;
+    font-size: 2rem;
 }
 
