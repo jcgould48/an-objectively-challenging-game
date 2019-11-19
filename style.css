@@ -5,7 +5,7 @@
 }
 
 #monster-health {
-    width: 60px;
+    width: 200px;
     height: 20px;
     background-color: red;
 }
@@ -20,3 +20,87 @@
 img {
     padding: 30px;
 }
+
+#app{
+    margin-left: 25%;
+    width: 600px;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+        "playerHP monsterHP"
+        "playerIcon monsterIcon"
+        "playerDamage monsterDamage"
+        "fightButton fightButton"   
+        "results results" 
+    ;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 50px 300px 50px 50px 100px;
+    align-items: center;
+    text-align: center;
+}
+
+#player-health{
+    grid-area: playerHP;
+    align-content: center;
+}
+
+#monster-health{
+    grid-area: monsterHP;
+}
+
+#player{
+    grid-area: playerIcon;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+}
+
+#player > img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#monster{
+    grid-area: monsterIcon;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+}
+#monster > img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#fight{
+    grid-area: fightButton;
+    height: 50px;
+}
+
+#player-damage-taken{
+    grid-area: playerDamage;
+}
+
+#monster-damage-taken{
+    grid-area: monsterDamage;
+}
+
+#results{
+    grid-area: results;
+}
+
