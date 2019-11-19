@@ -19,7 +19,7 @@ function fight(){
     if(currentEnemy.hitPoints > 0 && player.hitPoints > 0){
     if(playerDamage <=16){
         currentEnemy.hitPoints -= playerDamage;
-        document.querySelector('#monster-damage-taken').innerText = 'You got slapped with ' + playerDamage;
+        document.querySelector('#monster-damage-taken').innerText = 'You slapped with ' + playerDamage;
         document.querySelector('#monster-damage-taken').style.color = 'coral';
             document.querySelector('#monster-damage-taken').style.fontSize = '1rem';
         update()}
@@ -27,15 +27,15 @@ function fight(){
         else if (playerDamage >20){
             currentEnemy.hitPoints -= playerDamage;
             document.querySelector('#monster-damage-taken').innerText = 
-            'You got clobbered with ' + playerDamage;
+            'You clobbered with ' + playerDamage;
             document.querySelector('#monster-damage-taken').style.color = 'red';
             document.querySelector('#monster-damage-taken').style.fontSize = '1.5rem';
             update()
         }
         else{
             currentEnemy.hitPoints -= playerDamage;
-            document.querySelector('#monster-damage-taken').innerText = 'You got hit with ' + playerDamage;
-            document.querySelector('#monster-damage-taken').style.color = 'black';
+            document.querySelector('#monster-damage-taken').innerText = 'You hit with ' + playerDamage;
+            document.querySelector('#monster-damage-taken').style.color = 'ivory';
             document.querySelector('#monster-damage-taken').style.fontSize = '1rem';
             update()
         }
@@ -57,7 +57,7 @@ function fight(){
         else{
             player.hitPoints -= enemyDamage;
             document.querySelector('#player-damage-taken').innerText = 'You got hit with ' + enemyDamage;
-            document.querySelector('#player-damage-taken').style.color = 'black';
+            document.querySelector('#player-damage-taken').style.color = 'ivory';
             document.querySelector('#player-damage-taken').style.fontSize = '1rem';
             update()
         }

@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 #player-health {
     width: 200px;
     height: 20px;
@@ -21,7 +25,15 @@ img {
     padding: 30px;
 }
 
+html{
+    background-image: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #app{
+    position: fixed;
+    top: 30vh;
     margin-left: 25%;
     width: 600px;
     height: 100%;
@@ -102,5 +114,6 @@ img {
 
 #results{
     grid-area: results;
+    color: ivory;
 }
 
