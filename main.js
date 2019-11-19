@@ -17,12 +17,50 @@ function fight(){
     let playerDamage = getAttackDamage(player.attackMin, player.attackMax);
     let enemyDamage =getAttackDamage(currentEnemy.attackMin, currentEnemy.attackMax);
     if(currentEnemy.hitPoints > 0 && player.hitPoints > 0){
-    currentEnemy.hitPoints -= playerDamage;
-    document.querySelector('#monster-damage-taken').innerText = 'You got hit with ' + playerDamage;
-    player.hitPoints -= enemyDamage;
-    document.querySelector('#player-damage-taken').innerText = 'You got hit with ' + enemyDamage;
-
-    update()
+    if(playerDamage <=16){
+        currentEnemy.hitPoints -= playerDamage;
+        document.querySelector('#monster-damage-taken').innerText = 'You got slapped with ' + playerDamage;
+        document.querySelector('#monster-damage-taken').style.color = 'coral';
+            document.querySelector('#monster-damage-taken').style.fontSize = '1rem';
+        update()}
+        
+        else if (playerDamage >20){
+            currentEnemy.hitPoints -= playerDamage;
+            document.querySelector('#monster-damage-taken').innerText = 
+            'You got clobbered with ' + playerDamage;
+            document.querySelector('#monster-damage-taken').style.color = 'red';
+            document.querySelector('#monster-damage-taken').style.fontSize = '1.5rem';
+            update()
+        }
+        else{
+            currentEnemy.hitPoints -= playerDamage;
+            document.querySelector('#monster-damage-taken').innerText = 'You got hit with ' + playerDamage;
+            document.querySelector('#monster-damage-taken').style.color = 'black';
+            document.querySelector('#monster-damage-taken').style.fontSize = '1rem';
+            update()
+        }
+            
+        if (enemyDamage <= 14){
+            player.hitPoints -= enemyDamage;
+            document.querySelector('#player-damage-taken').innerText = 'You got slapped with ' + enemyDamage;
+            document.querySelector('#player-damage-taken').style.color = 'coral';
+            document.querySelector('#player-damage-taken').style.fontSize = '1rem';
+            update()
+        }
+        else if (enemyDamage >18){
+            player.hitPoints -= enemyDamage;
+            document.querySelector('#player-damage-taken').innerText = 'You got clobbered with ' + enemyDamage;
+            document.querySelector('#player-damage-taken').style.color = 'red';
+            document.querySelector('#player-damage-taken').style.fontSize = '1.5rem';
+            update()
+        }
+        else{
+            player.hitPoints -= enemyDamage;
+            document.querySelector('#player-damage-taken').innerText = 'You got hit with ' + enemyDamage;
+            document.querySelector('#player-damage-taken').style.color = 'black';
+            document.querySelector('#player-damage-taken').style.fontSize = '1rem';
+            update()
+        }
     }
     if(currentEnemy.hitPoints <= 0){
     document.querySelector("#monster>img").src = "./boss-monster.jpg";
