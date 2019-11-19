@@ -45,6 +45,7 @@ html{
         "playerDamage monsterDamage"
         "fightButton fightButton"   
         "results results" 
+        "footer footer"
     ;
     grid-template-columns: 300px 300px;
     grid-template-rows: 50px 300px 50px 50px 100px;
@@ -126,5 +127,11 @@ html{
     grid-area: results;
     color: ivory;
     font-size: 2rem;
+}
+
+#footer{
+    color: ivory;
+    position: fixed;
+    bottom: 0;
 }
 
