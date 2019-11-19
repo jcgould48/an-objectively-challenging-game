@@ -5,7 +5,9 @@ let currentEnemy = monster;
 
 update =()=>{
     document.querySelector("#player-health").innerText = player.hitPoints;
+    document.querySelector("#player-health").style.width = player.hitPoints +'px';
     document.querySelector("#monster-health").innerText = currentEnemy.hitPoints
+    document.querySelector("#monster-health").style.width = currentEnemy.hitPoints +'px'
 }
 update()
 
