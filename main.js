@@ -20,12 +20,13 @@ function fight(){
     update()
     }
     if(currentEnemy.hitPoints <= 0){
-    document.querySelector("#monster>img").src = "./boss-monster.jpg"
+    document.querySelector("#monster>img").src = "./boss-monster.jpg";
     currentEnemy = boss;
+    update()
     }
     if(player.hitPoints <= 0){
-        document.querySelector('#results').innerText = 'Mario is dead'
-        document.querySelector('#fight').innerText = 'Reset'
-        document.querySelector('#fight').removeEventListener("click", fight)
+        document.querySelector('#results').innerText = 'Mario is dead';
+        document.querySelector('#fight').innerText = 'Reset';
+        document.querySelector('#fight').removeEventListener("click", fight);
     }
 } 
