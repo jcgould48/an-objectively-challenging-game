@@ -14,9 +14,14 @@ update()
 document.querySelector("#fight").addEventListener("click", fight);
 
 function fight(){
+    let playerDamage = getAttackDamage(player.attackMin, player.attackMax);
+    let enemyDamage =getAttackDamage(currentEnemy.attackMin, currentEnemy.attackMax);
     if(currentEnemy.hitPoints > 0 && player.hitPoints > 0){
-    currentEnemy.hitPoints -= getAttackDamage(player.attackMin, player.attackMax);
-    player.hitPoints -= getAttackDamage(currentEnemy.attackMin, currentEnemy.attackMax);
+    currentEnemy.hitPoints -= playerDamage;
+    document.querySelector('#monster-damage-taken').innerText = 'You got hit with ' + playerDamage;
+    player.hitPoints -= enemyDamage;
+    document.querySelector('#player-damage-taken').innerText = 'You got hit with ' + enemyDamage;
+
     update()
     }
     if(currentEnemy.hitPoints <= 0){
