@@ -28,5 +28,10 @@ function fight(){
         document.querySelector('#results').innerText = 'Mario is dead';
         document.querySelector('#fight').innerText = 'Reset';
         document.querySelector('#fight').removeEventListener("click", fight);
+        document.querySelector('#fight').addEventListener("click", reset);
     }
 } 
+
+function reset(){
+    document.location.reload(true);
+}
