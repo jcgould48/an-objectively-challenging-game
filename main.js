@@ -70,6 +70,7 @@ function fight(){
     if(player.hitPoints <= 0){
         document.querySelector('#results').innerText = 'Game Over';
         document.querySelector('#fight').innerText = 'Reset';
+        document.querySelector('#player-image').src = "./gravestone.png";
         document.querySelector('#fight').removeEventListener("click", fight);
         document.querySelector('#fight').addEventListener("click", reset);
     }
